@@ -1,0 +1,166 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "object",
+  "properties": {
+    "RESPONSE": {
+      "type": "object",
+      "properties": {
+        "RESULT": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "_attr_id": {
+                "type": "string"
+              },
+              "Camera": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "$ref": "#/definitions/camera"
+                }
+              },
+              "INFO": {
+                "type": "object",
+                "properties": {
+                  "LASTMODIFIED": {
+                    "type": "object",
+                    "properties": {
+                      "_attr_datetime": {
+                        "type": "string",
+                        "format": "date-time"
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "LASTCHANGEID": {
+                    "type": "string"
+                  },
+                  "EVALRESULT": {
+                    "type": "array",
+                    "items": {},
+                    "additionalProperties": true
+                  },
+                  "SSEURL": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              },
+              "ERROR": {
+                "type": "object",
+                "properties": {
+                  "SOURCE": {
+                    "type": "string"
+                  },
+                  "MESSAGE": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "RESULT"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "RESPONSE"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "camera": {
+      "type": "object",
+      "properties": {
+        "Active": {
+          "type": "boolean"
+        },
+        "CameraGroup": {
+          "type": "string"
+        },
+        "ContentType": {
+          "type": "string"
+        },
+        "CountyNo": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "Deleted": {
+          "type": "boolean"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "Direction": {
+          "type": "integer"
+        },
+        "Geometry": {
+          "$ref": "#/definitions/geometry"
+        },
+        "HasFullSizePhoto": {
+          "type": "boolean"
+        },
+        "HasSketchImage": {
+          "type": "boolean"
+        },
+        "IconId": {
+          "type": "string"
+        },
+        "Id": {
+          "type": "string"
+        },
+        "Location": {
+          "type": "string"
+        },
+        "ModifiedTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Type": {
+          "type": "string"
+        },
+        "PhotoTime": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?\\+\\d{2}:\\d{2}$"
+        },
+        "PhotoUrl": {
+          "type": "string"
+        },
+        "Status": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "geometry": {
+      "type": "object",
+      "properties": {
+        "SWEREF99TM": {
+          "$ref": "#/definitions/WKT_SWEREF99TM"
+        },
+        "WGS84": {
+          "$ref": "#/definitions/WKT_WGS84"
+        }
+      },
+      "additionalProperties": false
+    },
+    "WKT_SWEREF99TM": {
+      "type": "string",
+      "pattern": "POINT\\s?\\((\\d+(\\.\\d+)?(\\s|\\))){2}|LINESTRING\\s?\\(((,\\s?)?((\\d+(\\.\\d+)?)\\s?){2}){2,}\\)|MULTILINESTRING\\s?\\(\\s?((,\\s?)?\\(((,\\s)?((\\d+(\\.\\d+)?)\\s?){2}){2,}\\)){2,}\\s?\\)|POLYGON\\s?\\(((,?\\s?)\\((((,\\s)?-?\\d+(\\.\\d+)?\\s?){2}){1,}\\)){1,}\\)|MULTIPOLYGON\\s?\\(((,\\s?)?\\(((,?\\s?)\\((((,\\s)?-?\\d+(\\.\\d+)?\\s?){2}){1,}\\)){1,}\\)){1,}\\)"
+    },
+    "WKT_WGS84": {
+      "type": "string",
+      "pattern": "POINT\\s?\\((\\d+(\\.\\d+)?(\\s|\\))){2}|LINESTRING\\s?\\(((,\\s?)?((\\d+(\\.\\d+)?)\\s?){2}){2,}\\)|MULTILINESTRING\\s?\\(\\s?((,\\s?)?\\(((,\\s)?((\\d+(\\.\\d+)?)\\s?){2}){2,}\\)){2,}\\s?\\)|POLYGON\\s?\\(((,?\\s?)\\((((,\\s)?-?\\d+(\\.\\d+)?\\s?){2}){1,}\\)){1,}\\)|MULTIPOLYGON\\s?\\(((,\\s?)?\\(((,?\\s?)\\((((,\\s)?-?\\d+(\\.\\d+)?\\s?){2}){1,}\\)){1,}\\)){1,}\\)"
+    }
+  }
+}
