@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title>Meteorologiska observationer från SMHI: Välj version (sedan parameter, station och tidsutsnitt)</title>
+  <link rel="self" type="application/atom+xml" href="https://opendata-download-metobs.smhi.se/api.atom" title="Meteorologiska observationer från SMHI: Välj version (sedan parameter, station och tidsutsnitt)" />
+  <link rel="enclosure" type="application/json" href="https://opendata-download-metobs.smhi.se/api.json" title="Meteorologiska observationer från SMHI: Välj version (sedan parameter, station och tidsutsnitt)" />
+  <link rel="enclosure" type="application/xml" href="https://opendata-download-metobs.smhi.se/api.xml" title="Meteorologiska observationer från SMHI: Välj version (sedan parameter, station och tidsutsnitt)" />
+  <author>
+    <name>SMHI - Open Data</name>
+    <email>dataleveranser@smhi.se</email>
+  </author>
+  <subtitle>Nedladdningstjänst för svenska meteorologiska observationsdata från SMHI (enligt krav från INSPIRE-direktivet). Du kan ladda ned data för en parameter och en station i taget. Erbjudna format är Atomflöde, XML och JSON. Nedladdningstjänsten är strukturerad i följande nivåer: (1) Parameter (2) Station (3) Tidsutsnitt enligt URL-strukturen https://opendata-download-metobs-utv.smhi.se/api/version/{version}/parameter/{parameter}/station/{station}/period/{period}/data.csv. Mer information om datamängderna finns i dess metadata, se Utforskaren för Öppna Data: https://opendata-catalog.smhi.se/explore/. Senaste version av tjänsterna är versionen med högst versionsnummer. Äldre versioner behålls en tid för bakåtkompatibilitet. Frågor ställs till: dataleveranser@smhi.se</subtitle>
+  <id>https://opendata-download-metobs.smhi.se/api.atom</id>
+  <rights>Copyright (c) 2013, SMHI; all rights reserved</rights>
+  <updated>2022-03-18T16:33:30Z</updated>
+  <dc:date>2022-03-18T16:33:30Z</dc:date>
+  <dc:rights>Copyright (c) 2013, SMHI; all rights reserved</dc:rights>
+  <entry>
+    <title>Senaste versionen av nedladdningstjänsten</title>
+    <link rel="enclosure" type="application/atom+xml" href="https://opendata-download-metobs.smhi.se/api/version/latest.atom" title="Senaste versionen av nedladdningstjänsten" />
+    <link rel="enclosure" type="application/json" href="https://opendata-download-metobs.smhi.se/api/version/latest.json" title="Senaste versionen av nedladdningstjänsten" />
+    <link rel="enclosure" type="application/xml" href="https://opendata-download-metobs.smhi.se/api/version/latest.xml" title="Senaste versionen av nedladdningstjänsten" />
+    <author>
+      <name>SMHI - Open Data</name>
+      <email>dataleveranser@smhi.se</email>
+    </author>
+    <id>https://opendata-download-metobs.smhi.se/api/version/latest.atom</id>
+    <updated>2022-03-18T16:00:00Z</updated>
+    <published>2022-03-18T16:00:00Z</published>
+    <summary type="text" />
+    <dc:date>2022-03-18T16:00:00Z</dc:date>
+  </entry>
+  <entry>
+    <title>1.0 versionen av nedladdningstjänsten</title>
+    <link rel="enclosure" type="application/atom+xml" href="https://opendata-download-metobs.smhi.se/api/version/1.0.atom" title="1.0 versionen av nedladdningstjänsten" />
+    <link rel="enclosure" type="application/json" href="https://opendata-download-metobs.smhi.se/api/version/1.0.json" title="1.0 versionen av nedladdningstjänsten" />
+    <link rel="enclosure" type="application/xml" href="https://opendata-download-metobs.smhi.se/api/version/1.0.xml" title="1.0 versionen av nedladdningstjänsten" />
+    <author>
+      <name>SMHI - Open Data</name>
+      <email>dataleveranser@smhi.se</email>
+    </author>
+    <id>https://opendata-download-metobs.smhi.se/api/version/1.0.atom</id>
+    <updated>2022-03-18T16:00:00Z</updated>
+    <published>2022-03-18T16:00:00Z</published>
+    <summary type="text" />
+    <dc:date>2022-03-18T16:00:00Z</dc:date>
+  </entry>
+</feed>
